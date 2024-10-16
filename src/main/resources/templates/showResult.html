@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sensor System</title>
+    <link rel="stylesheet" type="text/css" href="/showResult.css">
+</head>
+<body>
+    <div class="container">
+        <h3>Your sensor: "<span th:text="${sensor.sensorName}"></span>" was successfully added !</h3>
+
+        <form action="/sensorForm" method="Get">
+            <button type="submit" class="btn">Add New Sensor</button>
+        </form>
+
+        <form action="/displaySensorList" method="Get">
+            <button type="submit" class="btn">Sensor List</button>
+        </form>
+    </div>
+</body>
+</html>

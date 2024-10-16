@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sensor List</title>
+  <link rel="stylesheet" type="text/css" href="/sensorList.css">
+</head>
+<body>
+  <div class="container">
+    <h3>Sensor List</h3>
+    <!-- Display the total number of sensors -->
+    <p>Total Sensors: <span th:text="${totalSensors}"></span></p>
+    <div class="list-group">
+      <ul>
+        <!-- Loop through the sensors list and display each one -->
+        <li th:each="sensor : ${sensorList}">
+          Name: <span th:text="${sensor.sensorName}"></span>,
+          Type: <span th:text="${sensor.sensorType}"></span>,
+          Location: <span th:text="${sensor.sensorLocation}"></span>,
+          Status: <span th:text="${sensor.sensorStatus}"></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
