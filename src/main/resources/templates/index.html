@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sensor Registration</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheet.css">
+</head>
+<body>
+    <h1>Sensor Registration System</h1>
+
+    <div class="container">
+        <h1>Add Sensor</h1>
+        <form action="/addSensor" method="post" th:object="${sensor}">
+            <div class="form-group">
+                <label for="sensorName">Sensor Name</label>
+                <input type="text" class="form-control" id="sensorName" name="sensorName" required>
+            </div>
+            <div class="form-group">
+                <label for="sensorType">Sensor Type</label>
+                <input type="text" class="form-control" id="sensorType" name="sensorType" required>
+            </div>
+            <div class="form-group">
+                <label for="sensorPin">Sensor Pin</label>
+                <input type="number" class="form-control" id="sensorPin" name="sensorPin" required>
+            </div>
+            <div class="form-group">
+                <label for="sensorLocation">Sensor Location</label>
+                <input type="text" class="form-control" id="sensorLocation" name="sensorLocation">
+            </div>
+            <div class="form-group">
+                <label for="sensorStatus">Sensor Status</label>
+                <select class="form-control" id="sensorStatus" name="sensorStatus" required>
+                    <option disabled selected>Select Status</option>
+                    <option value="ON">ON</option>
+                    <option value="OFF">OFF</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Sensor</button>
+        </form>
+        <p>OR</p>
+
+        <!-- Button to go to Sensor List -->
+        <form action="/displaySensorList" method="get" style="margin-top: 20px;">
+            <button type="submit" class="btn btn-secondary">Show Sensor List</button>
+        </form>
+    </div>
+</body>
+</html>
