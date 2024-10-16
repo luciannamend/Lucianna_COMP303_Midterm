@@ -50,10 +50,6 @@ public class SensorController {
     public String displaySensorList(Model model){
         List<Sensor> sensorList = sensorRepository.findAll();
 
-        if(sensorList.isEmpty()){
-            return "error";
-        }
-
         int totalSensors = sensorList.size();
 
         model.addAttribute("sensorList", sensorList);
